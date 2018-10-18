@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+@-webkit-keyframes headerOff {
+  from {
+    background: #282828;
+  }
+
+  to {
+    background: #f5f8fa;
+  }
+}
+
+@keyframes headerOff {
+  from {
+    background: #282828;
+  }
+
+  to {
+    background: #f5f8fa;
+  }
+}
+
+header {
+  background: #282828;
+}
+
+header.off {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: headerOff;
+          animation-name: headerOff;
+  background: #f5f8fa;
+}
+
+header.off a {
+  color: #282828 !important;
+}
+
+header a:hover {
+  text-decoration: none !important;
+}
+
+header .container {
+  width: 1260px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+header .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .container > div {
+  float: left;
+}
+
+header .container > div ul {
+  margin-top: 40px;
+}
+
+header .container > div ul li a {
+  font-family: "BMDOHYEON", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+
+header .container .logo {
+  margin-top: 35px;
+  margin-right: 30px;
+}
+
+header .container .logo a {
+  font-family: "BMDOHYEON", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+
+header .container .option ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .container .option ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+header .container .option ul li:last-child {
+  margin-right: 0;
+}
+
+header .container .user {
+  float: right;
+}
+
+header .container .user ul {
+  margin-top: 40px;
+}
+
+header .container .user ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .container .user ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+header .container .user ul li.userLi {
+  position: relative;
+}
+
+header .container .user ul li.userLi .dropdown {
+  display: none;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 3px;
+}
+
+header .container .user ul li.userLi .dropdown a {
+  color: #282828;
+}
+
+header .container .user ul li:last-child {
+  margin-right: 0;
+}
+
+header .container .user ul li a {
+  font-family: "BMDOHYEON", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.authWrap .loginWrap {
+  width: 360px;
+  margin: 100px auto;
+}
+
+.authWrap .loginWrap .headerText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #282828;
+}
+
+.authWrap .loginWrap form {
+  margin-top: 30px;
+}
+
+.authWrap .loginWrap form .row {
+  margin-bottom: 15px;
+}
+
+.authWrap .loginWrap form .row.auto_login::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.authWrap .loginWrap form .row.auto_login .form-check {
+  float: left;
+  width: 360px;
+  position: relative;
+}
+
+.authWrap .loginWrap form .row.auto_login .form-check input {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.authWrap .loginWrap form .row.auto_login .form-check label {
+  cursor: pointer;
+  left: 25px;
+  top: 40%;
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  color: #282828;
+}
+
+.authWrap .loginWrap form .row.auto_login .form-check a {
+  right: 0;
+  top: 40%;
+  font-size: 12px;
+  line-height: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  color: #282828;
+}
+
+.authWrap .loginWrap form .row label {
+  font-size: 12px;
+}
+
+.authWrap .loginWrap form .row > div {
+  margin-top: 10px;
+}
+
+.authWrap .loginWrap form .row > div:nth-child(2) {
+  margin-top: 5px;
+}
+
+.authWrap .loginWrap form .row > div > input {
+  width: 360px;
+  height: 43px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.authWrap .loginWrap form .row .btnWrap {
+  height: 60px;
+}
+
+.authWrap .loginWrap form .row .btnWrap button {
+  width: 100%;
+  height: 50px;
+  background: #282828;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authWrap .registerWrap {
+  width: 360px;
+  margin: 100px auto;
+}
+
+.authWrap .registerWrap .headerText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #282828;
+}
+
+.authWrap .registerWrap form {
+  margin-top: 30px;
+}
+
+.authWrap .registerWrap form .row {
+  margin-bottom: 15px;
+}
+
+.authWrap .registerWrap form .row label {
+  font-size: 12px;
+}
+
+.authWrap .registerWrap form .row > div {
+  margin-top: 10px;
+}
+
+.authWrap .registerWrap form .row > div > input {
+  width: 360px;
+  height: 43px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.authWrap .registerWrap form .btnWrap {
+  height: 60px;
+}
+
+.authWrap .registerWrap form .btnWrap button {
+  width: 100%;
+  height: 50px;
+  background: #282828;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authWrap .resetWrap {
+  width: 360px;
+  margin: 100px auto;
+}
+
+.authWrap .resetWrap .headerText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #282828;
+}
+
+.authWrap .resetWrap form {
+  margin-top: 30px;
+}
+
+.authWrap .resetWrap form .row {
+  margin-bottom: 15px;
+}
+
+.authWrap .resetWrap form .row label {
+  font-size: 12px;
+}
+
+.authWrap .resetWrap form .row > div {
+  margin-top: 10px;
+}
+
+.authWrap .resetWrap form .row > div > input {
+  width: 360px;
+  height: 43px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.authWrap .resetWrap form .btnWrap {
+  height: 60px;
+}
+
+.authWrap .resetWrap form .btnWrap button {
+  width: 100%;
+  height: 50px;
+  background: #282828;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.authWrap .emailWrap {
+  width: 360px;
+  margin: 100px auto;
+}
+
+.authWrap .emailWrap .headerText {
+  font-size: 24px;
+  line-height: 36px;
+  color: #282828;
+}
+
+.authWrap .emailWrap .alert {
+  margin-top: 20px;
+}
+
+.authWrap .emailWrap .load {
+  display: none;
+  margin-top: 10px;
+  color: #282828;
+}
+
+.authWrap .emailWrap form {
+  margin-top: 30px;
+}
+
+.authWrap .emailWrap form .row {
+  margin-bottom: 15px;
+}
+
+.authWrap .emailWrap form .row label {
+  font-size: 12px;
+}
+
+.authWrap .emailWrap form .row > div {
+  margin-top: 10px;
+}
+
+.authWrap .emailWrap form .row > div > input {
+  width: 360px;
+  height: 43px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 4px;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #ddd;
+}
+
+.authWrap .emailWrap form .btnWrap {
+  height: 60px;
+}
+
+.authWrap .emailWrap form .btnWrap button {
+  width: 100%;
+  height: 50px;
+  background: #282828;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resWrap .container {
+  width: 1260px;
+  margin: 100px auto;
+}
+
+.resWrap .container .title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.resWrap .container .header_icons {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.resWrap .container .header_icons ul {
+  display: inline-block;
+}
+
+.resWrap .container .header_icons ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.resWrap .container .header_icons ul li {
+  float: left;
+  cursor: pointer;
+  margin-right: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  background: #f5f8fa;
+  border: 3px solid #ddd;
+  position: relative;
+}
+
+.resWrap .container .header_icons ul li.off {
+  opacity: 0.2;
+}
+
+.resWrap .container .header_icons ul li.off:hover {
+  border: 3px solid #ddd;
+}
+
+.resWrap .container .header_icons ul li.off:hover a {
+  font-weight: normal;
+}
+
+.resWrap .container .header_icons ul li:last-child {
+  margin-right: 0;
+}
+
+.resWrap .container .header_icons ul li:hover {
+  border: 3px solid #282828;
+}
+
+.resWrap .container .header_icons ul li:hover a {
+  font-weight: bold;
+}
+
+.resWrap .container .header_icons ul li a {
+  position: absolute;
+  width: 80px;
+  top: 53%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  color: #282828;
+  font-size: 14px;
+}
+
+.resWrap .container .header_icons ul li:nth-child(2) a,
+.resWrap .container .header_icons ul li:nth-child(6) a {
+  top: 50%;
+}
+
+.resWrap .container .header_icons ul li:nth-child(5) a {
+  top: 50%;
+}
+
+.resWrap .container .contents {
+  display: none;
+}
+
+.resWrap .container .contents.on {
+  display: block;
+}
+
+.mainFooter {
+  background: #282828;
+}
+
+.mainFooter .contents {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 20px 0 60px 0;
+}
+
+.mainFooter .contents:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.mainFooter .contents > div {
+  color: #fff;
+}
+
+.mainFooter .contents .left {
+  float: left;
+}
+
+.mainFooter .contents .right {
+  float: right;
+}
+

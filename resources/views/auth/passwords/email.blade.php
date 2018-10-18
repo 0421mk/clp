@@ -1,47 +1,53 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+<div class="authWrap">
+    <div class="emailWrap">
+        <div class="headerText">
+            비밀번호를 찾기 안내를 위한<br>
+            <b>이메일 주소</b>를 입력해주세요.
+        </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+
+        <div class="load">
+            <i class='fas fa-circle-notch fa-spin fa-2x'></i> 4-5초의 시간이 소요됩니다.
+        </div>
+
+        <form method="POST" action="{{ route('password.email') }}" aria-label="{{ __('Reset Password') }}">
+            @csrf
+
+            <div class="row">
+                <label for="email">이메일</label>
+
+                <div>
+                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="이메일을 입력해주세요.">
+
+                    @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
                     @endif
-
-                    <form method="POST" action="{{ route('password.email') }}" aria-label="{{ __('Reset Password') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
-        </div>
+
+            <div class="btnWrap">
+                <button type="submit" class="btn btn-primary">
+                    비밀번호 리셋 메일을 보냅니다.
+                </button>
+            </div>
+        </form>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('.btnWrap button').click(function() {
+            $('.load').css('display', 'block');
+        });
+    });
+</script>
 @endsection

@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// main
+Route::get('/', [
+    'as' => 'main',
+    'uses' => 'mainController@index'
+])->name('home');
+
+Route::get('/home', [
+    'as' => 'home',
+    'uses' => 'mainController@index'
+])->name('home');
+
+Route::get('/reserve', [
+    'as' => 'reserve',
+    'uses' => 'resController@index'
+]);
