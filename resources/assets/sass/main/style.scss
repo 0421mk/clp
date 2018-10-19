@@ -5,16 +5,6 @@
     list-style: none;
 }
 
-@keyframes headerOff {
-  from {
-    background: #282828;
-  }
-
-  to {
-    background: #f5f8fa;
-  }
-}
-
 header {
     &.off {
         animation-duration: 1s;
@@ -356,7 +346,7 @@ header {
 .resWrap {
     .container {
         width: 1260px;
-        margin:100px auto;
+        margin:100px auto 200px auto;
         .title {
             text-align: center;
             font-size: 36px;
@@ -422,17 +412,80 @@ header {
                 }
             }
         }
+        .typeA {
+            display: none;
+        }
+        .typeB {
+            display: none;
+        }
+        .typcC {
+            display: none;
+        }
         .contents {
+            width: 780px;
+            margin:50px auto 0 auto;
             display: none;
             &.on {
-                display: block;
+                display: block !important;
+            }
+            .title {
+                font-size: 20px;
+                color: #282828;
+                font-weight: bold;
+                text-align: left;
+            }
+            .opts {
+                text-align: center;
+                ul {
+                    width: 100%;
+                    margin-top: 20px;
+                    display: inline-block;
+                    &::after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    li {
+                        &.cur {
+                            background: #f5f8fa;
+                            border:3px solid #282828;
+                        }
+                        margin-bottom: 20px;
+                        width: 30%;
+                        height: 100px;
+                        line-height: 100px;
+                        cursor: pointer;
+                        border-radius: 20px;
+                        display: inline-block;
+                        background: #fafafa;
+                        border:3px solid #ddd;
+                        float: left;
+                        margin-right: 5%;
+                        box-sizing: border-box;
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .subContainer {
+            .petService {
+                display: none;
+            }
+            .normalService {
+                display: none;
+            }
+            .maruService {
+                display: none;
             }
         }
     }
 }
-
-.mainFooter {
-    background: #282828;
+#mainFooter {
+    background: #fff;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
     .contents {
         width: 1260px;
         margin:0 auto;
@@ -443,7 +496,7 @@ header {
             clear: both;
         }
         & > div {
-            color: #fff;
+            color: #282828;
         }
         .left {
             float: left;

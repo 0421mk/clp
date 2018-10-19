@@ -5,26 +5,6 @@
   list-style: none;
 }
 
-@-webkit-keyframes headerOff {
-  from {
-    background: #282828;
-  }
-
-  to {
-    background: #f5f8fa;
-  }
-}
-
-@keyframes headerOff {
-  from {
-    background: #282828;
-  }
-
-  to {
-    background: #f5f8fa;
-  }
-}
-
 header {
   background: #282828;
 }
@@ -425,7 +405,7 @@ header .container .user ul li a {
 
 .resWrap .container {
   width: 1260px;
-  margin: 100px auto;
+  margin: 100px auto 200px auto;
 }
 
 .resWrap .container .title {
@@ -505,39 +485,116 @@ header .container .user ul li a {
   top: 50%;
 }
 
+.resWrap .container .typeA {
+  display: none;
+}
+
+.resWrap .container .typeB {
+  display: none;
+}
+
+.resWrap .container .typcC {
+  display: none;
+}
+
 .resWrap .container .contents {
+  width: 780px;
+  margin: 50px auto 0 auto;
   display: none;
 }
 
 .resWrap .container .contents.on {
-  display: block;
+  display: block !important;
 }
 
-.mainFooter {
-  background: #282828;
+.resWrap .container .contents .title {
+  font-size: 20px;
+  color: #282828;
+  font-weight: bold;
+  text-align: left;
 }
 
-.mainFooter .contents {
-  width: 1260px;
-  margin: 0 auto;
-  padding: 20px 0 60px 0;
+.resWrap .container .contents .opts {
+  text-align: center;
 }
 
-.mainFooter .contents:after {
+.resWrap .container .contents .opts ul {
+  width: 100%;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.resWrap .container .contents .opts ul::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.mainFooter .contents > div {
-  color: #fff;
+.resWrap .container .contents .opts ul li {
+  margin-bottom: 20px;
+  width: 30%;
+  height: 100px;
+  line-height: 100px;
+  cursor: pointer;
+  border-radius: 20px;
+  display: inline-block;
+  background: #fafafa;
+  border: 3px solid #ddd;
+  float: left;
+  margin-right: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.mainFooter .contents .left {
+.resWrap .container .contents .opts ul li.cur {
+  background: #f5f8fa;
+  border: 3px solid #282828;
+}
+
+.resWrap .container .contents .opts ul li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.resWrap .container .subContainer .petService {
+  display: none;
+}
+
+.resWrap .container .subContainer .normalService {
+  display: none;
+}
+
+.resWrap .container .subContainer .maruService {
+  display: none;
+}
+
+#mainFooter {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#mainFooter .contents {
+  width: 1260px;
+  margin: 0 auto;
+  padding: 20px 0 60px 0;
+}
+
+#mainFooter .contents:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#mainFooter .contents > div {
+  color: #282828;
+}
+
+#mainFooter .contents .left {
   float: left;
 }
 
-.mainFooter .contents .right {
+#mainFooter .contents .right {
   float: right;
 }
 

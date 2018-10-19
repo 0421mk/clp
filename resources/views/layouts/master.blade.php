@@ -30,13 +30,5 @@
     @if(config('app.env') == 'local')
         <script src="http://localhost:35729/livereload.js"></script>
     @endif
-
-    @if(Request::url() !== 'http://localhost:8009')
-    <script>
-        $(document).ready(function() {
-            $('#mainHeader').addClass("off");
-        });
-    </script>
-    @endif
 </body>
 </html>
